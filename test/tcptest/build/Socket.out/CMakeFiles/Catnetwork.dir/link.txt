@@ -1,0 +1,2 @@
+D:/QT/QT5/Tools/mingw730_64/bin/ar.exe qc ../build/Lib/libCatnetwork.a  CMakeFiles/Catnetwork.dir/Catnet.c.obj
+D:/QT/QT5/Tools/mingw730_64/bin/ranlib.exe ../build/Lib/libCatnetwork.a

@@ -1,0 +1,12 @@
+[
+{
+  "directory": "D:/demo/CatSocket/test/tcptest/build",
+  "command": "D:/QT/QT5/Tools/mingw730_64/bin/x86_64-w64-mingw32-gcc.exe  @CMakeFiles/tcptest.dir/includes_C.rsp -O3 -DNDEBUG   -D _WINDOWSSYS_ -o CMakeFiles/tcptest.dir/tcptest.c.obj   -c D:/demo/CatSocket/test/tcptest/tcptest.c",
+  "file": "D:/demo/CatSocket/test/tcptest/tcptest.c"
+},
+{
+  "directory": "D:/demo/CatSocket/test/tcptest/build/Socket.out",
+  "command": "D:/QT/QT5/Tools/mingw730_64/bin/x86_64-w64-mingw32-gcc.exe  @CMakeFiles/Catnetwork.dir/includes_C.rsp -O3 -DNDEBUG   -D _WINDOWSSYS_ -D _WINDOWSSYS_ -o CMakeFiles/Catnetwork.dir/Catnet.c.obj   -c D:/demo/CatSocket/Socket/Catnet.c",
+  "file": "D:/demo/CatSocket/Socket/Catnet.c"
+}
+]

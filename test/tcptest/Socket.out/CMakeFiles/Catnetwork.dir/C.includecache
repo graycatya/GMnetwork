@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/cat/code/linux/TCP/CatSocket/Socket/Catdef.h
+stdlib.h
+-
+stdio.h
+-
+unistd.h
+-
+errno.h
+-
+string.h
+-
+strings.h
+-
+sys/types.h
+-
+sys/socket.h
+-
+arpa/inet.h
+-
+
+/home/cat/code/linux/TCP/CatSocket/Socket/Catnet.c
+Catnet.h
+/home/cat/code/linux/TCP/CatSocket/Socket/Catnet.h
+
+/home/cat/code/linux/TCP/CatSocket/Socket/Catnet.h
+Catdef.h
+/home/cat/code/linux/TCP/CatSocket/Socket/Catdef.h
+
