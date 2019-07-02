@@ -142,7 +142,7 @@ ssize_t Cat_Send(int fd, const void *buf, size_t len)
 	#ifdef _WINDOWSSYS_
 		const char* bufs = (const char*)buf;
 	#else
-		void* bufs = buf;
+		const void* bufs = buf;
 	#endif
 	ssize_t ret;
 
