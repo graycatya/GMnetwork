@@ -15,4 +15,6 @@ add_library(Catnetwork ${DIR_LIB_SRCS})
 if(_WINDOWSSYS_)
     target_link_libraries(Catnetwork ws2_32)
     target_link_libraries(Catnetwork wsock32)
+else
+    
 endif(_WINDOWSSYS_)
