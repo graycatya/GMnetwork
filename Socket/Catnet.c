@@ -21,7 +21,7 @@ int Cat_Bind(int fd, struct sockaddr *addr, void* addrlen)
 	#ifdef _WINDOWSSYS_
 	int* addlen = (int*)addrlen;
 	#else
-	strlen_t* addlen = (strlen_t*)addrlen;
+	socklen_t* addlen = (socklen_t*)addrlen;
 	#endif
 
 	if(addr == NULL)
@@ -53,7 +53,7 @@ int Cat_Accept(int fd, struct sockaddr *addr, void *addrlen, int connects)
 	#ifdef _WINDOWSSYS_
 	int* addlen = (int*)addrlen;
 	#else
-	strlen_t* addlen = (strlen_t*)addrlen;
+	socklen_t* addlen = (socklen_t*)addrlen;
 	#endif
 	int ret, Connectiontimes = 0;
 connect:
@@ -84,7 +84,7 @@ int Cat_Connect(int fd, const struct sockaddr *addr, void* addrlen)
 	#ifdef _WINDOWSSYS_
 	int* addlen = (int*)addrlen;
 	#else
-	strlen_t* addlen = (strlen_t*)addrlen;
+	socklen_t* addlen = (socklen_t*)addrlen;
 	#endif
 	int ret;
 	if((ret = connect(fd, addr, *addlen)) < 0)
@@ -235,7 +235,7 @@ ssize_t Cat_UdpRead(int fd, void *buf, size_t len, struct sockaddr* src_addr, vo
 	#ifdef _WINDOWSSYS_
 	int* addlen = (int*)addrlen;
 	#else
-	strlen_t* addlen = (strlen_t*)addrlen;
+	socklen_t* addlen = (socklen_t*)addrlen;
 	#endif
 	ssize_t ret;
 
@@ -261,7 +261,7 @@ ssize_t Cat_UdpSend(int fd, const void *buf, size_t len, const struct sockaddr* 
 	#ifdef _WINDOWSSYS_
 	int* addlen = (int*)addrlen;
 	#else
-	strlen_t* addlen = (strlen_t*)addrlen;
+	socklen_t* addlen = (socklen_t*)addrlen;
 	#endif
 
 	ssize_t ret;
@@ -286,7 +286,7 @@ ssize_t Cat_UdpReads(int fd, void *buf, size_t len, struct sockaddr* src_addr, v
 	#ifdef _WINDOWSSYS_
 	int* addlen = (int*)addrlen;
 	#else
-	strlen_t* addlen = (strlen_t*)addrlen;
+	socklen_t* addlen = (socklen_t*)addrlen;
 	#endif
 	size_t nleft;	//剩余未读的字节数
 	ssize_t nread;	//实际读取的字节数
@@ -324,7 +324,7 @@ ssize_t Cat_UdpSends(int fd, const void *buf, size_t len, const struct sockaddr*
 	#ifdef _WINDOWSSYS_
 	int* addlen = (int*)addrlen;
 	#else
-	strlen_t* addlen = (strlen_t*)addrlen;
+	socklen_t* addlen = (socklen_t*)addrlen;
 	#endif
 	size_t nleft;	//剩余未发送的字节数
 	ssize_t nsend;	//实际发送取的字节数

@@ -14,7 +14,5 @@ aux_source_directory(. DIR_LIB_SRCS)
 add_library(Catnetwork ${DIR_LIB_SRCS})
 if(_WINDOWSSYS_)
     target_link_libraries(Catnetwork ws2_32)
-    target_link_libraries(Catnetwork wsock32)
-else
-    
+    target_link_libraries(Catnetwork wsock32) 
 endif(_WINDOWSSYS_)
