@@ -1,6 +1,0 @@
-D:/demo/CatSocket/test/tcptest/build/CMakeFiles/tcptest.dir
-D:/demo/CatSocket/test/tcptest/build/CMakeFiles/edit_cache.dir
-D:/demo/CatSocket/test/tcptest/build/CMakeFiles/rebuild_cache.dir
-D:/demo/CatSocket/test/tcptest/build/Socket.out/CMakeFiles/Catnetwork.dir
-D:/demo/CatSocket/test/tcptest/build/Socket.out/CMakeFiles/edit_cache.dir
-D:/demo/CatSocket/test/tcptest/build/Socket.out/CMakeFiles/rebuild_cache.dir

@@ -1,7 +1,7 @@
 #ifndef __CATNET_H_
 #define __CATNET_H_
 
-#include "Catdef.h"
+#include "../Catdef.h"
 
 enum {
 CAT_IPV4,

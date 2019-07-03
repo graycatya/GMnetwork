@@ -1,7 +1,0 @@
-{
-    "C_Cpp.default.configurationProvider": "vector-of-bool.cmake-tools",
-    "files.associations": {
-        "catnet.h": "c",
-        "catdef.h": "c"
-    }
-}

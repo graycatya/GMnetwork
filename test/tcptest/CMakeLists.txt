@@ -16,8 +16,8 @@ if(_WINDOWSSYS_)
     add_definitions(-D _WINDOWSSYS_)    
 endif(_WINDOWSSYS_)
 
-include_directories("${PROJECT_SOURCE_DIR}/../../Socket")
-add_subdirectory(${PROJECT_SOURCE_DIR}/../../Socket Socket.out)
+include_directories("${PROJECT_SOURCE_DIR}/../../SrcLib/Network")
+add_subdirectory(${PROJECT_SOURCE_DIR}/../../SrcLib/Network Network.out)
 set (EXTRA_LIBS0 ${EXTRA_LIBS0} Catnetwork)
 
 
