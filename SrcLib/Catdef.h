@@ -26,6 +26,17 @@
 #include <sys/epoll.h>
 #include <sys/select.h>
 #include <signal.h>
+
+/* 设置非阻塞 */
+int Catsetnonblocking(int fd)
+{
+	int old_option = fcntl(fd, F_GETFL);
+	int new_option = old_option | O_NONBLOCK;
+	fcntl(fd, F_SETFL, new_option);
+	return old_option;
+}
+
+
 #endif
 
 #define _OUT(format, ...) printf((format), ##__VA_ARGS__)
