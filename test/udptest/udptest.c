@@ -22,7 +22,7 @@ int main(int argc, char *argv[])
 	ret = Cat_UdpRead(sockfd, buf, 1024-1, (struct sockaddr*)&server, (void *)&server_len);
 	printf("buf %s\n", buf);
 	ret = Cat_UdpSend(sockfd, (const void*)buf, ret, (const struct sockaddr*)&server, (void *)&server_len);
-	//Sleep(1);
+	sleep(1);
 	Cat_Close(sockfd);
 	return 0;
 }

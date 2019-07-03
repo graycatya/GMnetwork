@@ -1,0 +1,2 @@
+/usr/bin/ar qc ../build/Lib/libCatnetwork.a  CMakeFiles/Catnetwork.dir/Catnet.c.o
+/usr/bin/ranlib ../build/Lib/libCatnetwork.a

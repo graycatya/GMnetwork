@@ -1,0 +1,6 @@
+/home/cat/code/GMnetwork/test/udptest/CMakeFiles/rebuild_cache.dir
+/home/cat/code/GMnetwork/test/udptest/CMakeFiles/udptest.dir
+/home/cat/code/GMnetwork/test/udptest/CMakeFiles/edit_cache.dir
+/home/cat/code/GMnetwork/test/udptest/Network.out/CMakeFiles/rebuild_cache.dir
+/home/cat/code/GMnetwork/test/udptest/Network.out/CMakeFiles/Catnetwork.dir
+/home/cat/code/GMnetwork/test/udptest/Network.out/CMakeFiles/edit_cache.dir

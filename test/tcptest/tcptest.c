@@ -27,7 +27,7 @@ int main(int argc, char *argv[])
 	ret = Cat_Read(connfd, buf, 1024-1);
 
 	ret = Cat_Send(connfd, buf, ret);
-	Sleep(1);
+	sleep(1);
 	Cat_Close(sockfd);
 
 	return 0;

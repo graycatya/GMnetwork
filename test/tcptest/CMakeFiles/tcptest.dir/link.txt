@@ -1,0 +1,1 @@
+/usr/bin/cc -O3 -DNDEBUG  -rdynamic CMakeFiles/tcptest.dir/tcptest.c.o  -o build/Bin/tcptest build/Lib/libCatnetwork.a 
