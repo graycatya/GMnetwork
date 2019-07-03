@@ -1,0 +1,42 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/cat/code/GMnetwork/Socket/Catdef.h
+stdlib.h
+-
+stdio.h
+-
+unistd.h
+-
+errno.h
+-
+string.h
+-
+strings.h
+-
+sys/types.h
+-
+ws2tcpip.h
+-
+winsock.h
+-
+WinSock2.h
+-
+sys/socket.h
+-
+arpa/inet.h
+-
+
+/home/cat/code/GMnetwork/Socket/Catnet.c
+Catnet.h
+/home/cat/code/GMnetwork/Socket/Catnet.h
+
+/home/cat/code/GMnetwork/Socket/Catnet.h
+Catdef.h
+/home/cat/code/GMnetwork/Socket/Catdef.h
+
