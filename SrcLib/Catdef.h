@@ -8,6 +8,9 @@
 #include <string.h>
 #include <strings.h>
 #include <sys/types.h>
+#include <assert.h>
+#include <pthread.h>
+#include <errno.h>
 
 #ifdef _WINDOWSSYS_ 
 #include <ws2tcpip.h>
@@ -22,6 +25,7 @@
 #include <arpa/inet.h>
 #include <sys/epoll.h>
 #include <sys/select.h>
+#include <signal.h>
 #endif
 
 #define _OUT(format, ...) printf((format), ##__VA_ARGS__)
