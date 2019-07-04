@@ -1,0 +1,3 @@
+/home/cat/code/GMnetwork/SrcLib/catepoll/CMakeFiles/rebuild_cache.dir
+/home/cat/code/GMnetwork/SrcLib/catepoll/CMakeFiles/catepoll.dir
+/home/cat/code/GMnetwork/SrcLib/catepoll/CMakeFiles/edit_cache.dir

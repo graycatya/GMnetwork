@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC   -shared -Wl,-soname,libCatnetwork.so -o libCatnetwork.so CMakeFiles/Catnetwork.dir/Catnet.c.o 

@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC   -shared -Wl,-soname,libcatepoll.so -o libcatepoll.so CMakeFiles/catepoll.dir/Catepoll.c.o  -L/home/cat/code/GMnetwork/SrcLib/catepoll/../Network -Wl,-rpath,/home/cat/code/GMnetwork/SrcLib/catepoll/../Network -lCatnetwork -lCatnetwork 

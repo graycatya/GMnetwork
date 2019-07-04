@@ -36,7 +36,7 @@ int Catsetnonblocking(int fd)
 	return old_option;
 }
 
-
+//typedef struct epoll_event epoll_event;
 #endif
 
 #define _OUT(format, ...) printf((format), ##__VA_ARGS__)

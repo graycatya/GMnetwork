@@ -1,6 +1,10 @@
 {
     "files.associations": {
         "pthread.h": "c",
-        "semaphore.h": "c"
+        "semaphore.h": "c",
+        "catepoll.h": "c",
+        "catdef.h": "c",
+        "stdlib.h": "c",
+        "catnet.h": "c"
     }
 }
