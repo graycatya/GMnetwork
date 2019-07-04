@@ -277,6 +277,7 @@ int threadpool_free(threadpool_t *pool)
 
     free(pool);
     pool = NULL;
+    return 0;
 }
 
 int threadpool_destroy(threadpool_t *pool)

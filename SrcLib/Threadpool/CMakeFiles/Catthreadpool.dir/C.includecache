@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/cat/code/GMnetwork/SrcLib/Threappool/catthreadpool.c
+catthreadpool.h
+/home/cat/code/GMnetwork/SrcLib/Threappool/catthreadpool.h
+
+/home/cat/code/GMnetwork/SrcLib/Threappool/catthreadpool.h
+stdlib.h
+-
+pthread.h
+-
+unistd.h
+-
+assert.h
+-
+stdio.h
+-
+string.h
+-
+signal.h
+-
+errno.h
+-
+
