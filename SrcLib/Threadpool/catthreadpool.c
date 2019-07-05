@@ -70,7 +70,7 @@ threadpool_t *threadpool_create(int min_thread_num, int max_thread_num, int queu
         for(i = 0; i < min_thread_num; i++)
         {
             pthread_create(&(pool->threads[i]), &attr, threadpool_thread, (void *)pool);
-            printf("start thread 0x%x...\n", (unsigned int)pool->threads[i]);
+            //printf("start thread 0x%x...\n", (unsigned int)pool->threads[i]);
         }
 
         //管理者线程
@@ -135,7 +135,7 @@ void *threadpool_thread(void *threadpool)
         /*queue_size == 0 说明没有任务，调 wait 阻塞在条件变量上, 若有任务，跳过该while*/
         while((pool->queue_size == 0) && (!pool->shutdown))
         {
-            printf("thread 0x%x is waiting\n", (unsigned int)pthread_self());
+            //printf("thread 0x%x is waiting\n", (unsigned int)pthread_self());
             pthread_cond_wait(&(pool->queue_not_empty), &(pool->my_lock));
 
             /* 清除指定数目的空闲线程，如果要结束的线程个数大于0，结束线程 */
@@ -146,7 +146,7 @@ void *threadpool_thread(void *threadpool)
                 /* 如果线程池里线程个数大于最小值时可以结束当前线程 */
                 if(pool->live_thread_num > pool->min_thread_num)
                 {
-                    printf("thread 0x%x is exiting\n", (unsigned int)pthread_self());
+                    //printf("thread 0x%x is exiting\n", (unsigned int)pthread_self());
                     pool->live_thread_num--;
                     pthread_mutex_unlock(&(pool->my_lock));
                     pthread_exit(NULL);
@@ -158,7 +158,7 @@ void *threadpool_thread(void *threadpool)
         if(pool->shutdown)
         {
             pthread_mutex_unlock(&(pool->my_lock));
-            printf("thread 0x%x is exiting\n", (unsigned int)pthread_self());
+            //printf("thread 0x%x is exiting\n", (unsigned int)pthread_self());
             pthread_exit(NULL);
         }
 
@@ -176,14 +176,14 @@ void *threadpool_thread(void *threadpool)
         pthread_mutex_unlock(&(pool->my_lock));
 
         /* 执行任务 */
-        printf("thread 0x%x start working\n", (unsigned int)pthread_self());
+        //printf("thread 0x%x start working\n", (unsigned int)pthread_self());
         pthread_mutex_lock(&(pool->thread_counter_lock));
         pool->busy_thread_num++;    /* 防止出现脏写 */
         pthread_mutex_unlock(&(pool->thread_counter_lock));
 
         (*(task.function))(task.arg);   /* 执行回调 */
 
-        printf("thread 0x%x end working\n", (unsigned int)pthread_self());
+        //printf("thread 0x%x end working\n", (unsigned int)pthread_self());
         pthread_mutex_lock(&(pool->thread_counter_lock));
         pool->busy_thread_num--;
         pthread_mutex_unlock(&(pool->thread_counter_lock));

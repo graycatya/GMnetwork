@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/cat/code/GMnetwork/test/11/lst_timer.h
+time.h
+-
+
+/home/cat/code/GMnetwork/test/11/nonactive_conn.cpp
+sys/types.h
+-
+sys/socket.h
+-
+netinet/in.h
+-
+arpa/inet.h
+-
+assert.h
+-
+stdio.h
+-
+signal.h
+-
+unistd.h
+-
+errno.h
+-
+string.h
+-
+fcntl.h
+-
+stdlib.h
+-
+sys/epoll.h
+-
+pthread.h
+-
+lst_timer.h
+/home/cat/code/GMnetwork/test/11/lst_timer.h
+

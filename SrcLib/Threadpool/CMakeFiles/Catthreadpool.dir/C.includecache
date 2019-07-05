@@ -6,11 +6,11 @@
 
 #IncludeRegexTransform: 
 
-/home/cat/code/GMnetwork/SrcLib/Threappool/catthreadpool.c
+/home/cat/code/GMnetwork/SrcLib/Threadpool/catthreadpool.c
 catthreadpool.h
-/home/cat/code/GMnetwork/SrcLib/Threappool/catthreadpool.h
+/home/cat/code/GMnetwork/SrcLib/Threadpool/catthreadpool.h
 
-/home/cat/code/GMnetwork/SrcLib/Threappool/catthreadpool.h
+/home/cat/code/GMnetwork/SrcLib/Threadpool/catthreadpool.h
 stdlib.h
 -
 pthread.h

@@ -4,7 +4,7 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/cat/code/GMnetwork/SrcLib/Threappool/catthreadpool.c" "/home/cat/code/GMnetwork/SrcLib/Threappool/CMakeFiles/Catthreadpool.dir/catthreadpool.c.o"
+  "/home/cat/code/GMnetwork/SrcLib/Threadpool/catthreadpool.c" "/home/cat/code/GMnetwork/SrcLib/Threadpool/CMakeFiles/Catthreadpool.dir/catthreadpool.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

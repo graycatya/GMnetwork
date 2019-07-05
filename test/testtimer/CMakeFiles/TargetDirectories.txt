@@ -1,0 +1,3 @@
+/home/cat/code/GMnetwork/test/testtimer/CMakeFiles/rebuild_cache.dir
+/home/cat/code/GMnetwork/test/testtimer/CMakeFiles/test.dir
+/home/cat/code/GMnetwork/test/testtimer/CMakeFiles/edit_cache.dir
