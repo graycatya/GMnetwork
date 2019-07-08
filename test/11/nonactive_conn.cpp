@@ -16,15 +16,37 @@
 
 #define FD_LIMIT 65535
 #define MAX_EVENT_NUMBER 1024
-#define TIMESLOT 5
+#define TIMESLOT 2
 
 static int pipefd[2];
 static sort_timer_lst timer_lst;
 static int epollfd = 0;
 
+/**
+ * @brief 设置文件描述符属性
+ * @param fd 文件描述符
+ * @param flags 需要设置的文件描述符标志
+ */
+void set_fl(int fd, int flags)
+{
+	int		val;
+
+	// 获取标志
+	if ((val = fcntl(fd, F_GETFL, 0)) < 0) {
+		//error_ret("fcntl get error");
+	}
+
+	val |= flags;
+
+	// 设置标志
+	if (fcntl(fd, F_SETFL, val) < 0) {
+		//error_ret("fcntl set error");
+	}
+}
+
 int setnonblocking( int fd )
 {
-    int old_option = fcntl( fd, F_GETFL );
+    int old_option = fcntl( fd, F_GETFL , 0);
     int new_option = old_option | O_NONBLOCK;
     fcntl( fd, F_SETFL, new_option );
     return old_option;
@@ -34,9 +56,10 @@ void addfd( int epollfd, int fd )
 {
     epoll_event event;
     event.data.fd = fd;
-    event.events = EPOLLIN | EPOLLET;
+    event.events = EPOLLIN | EPOLLET | EPOLLRDHUP;
     epoll_ctl( epollfd, EPOLL_CTL_ADD, fd, &event );
-    setnonblocking( fd );
+    //setnonblocking( fd );
+    set_fl(fd, O_NONBLOCK);
 }
 
 void sig_handler( int sig )
@@ -102,14 +125,16 @@ int main( int argc, char* argv[] )
     assert( epollfd != -1 );
     addfd( epollfd, listenfd );
 
-    ret = socketpair( PF_UNIX, SOCK_STREAM, 0, pipefd );
+    ret = socketpair( AF_UNIX, SOCK_STREAM, 0, pipefd );
+    printf("ret = %d\n", ret);
     assert( ret != -1 );
-    setnonblocking( pipefd[1] );
+    set_fl(pipefd[1], O_NONBLOCK);
     addfd( epollfd, pipefd[0] );
 
     // add all the interesting signals here
     addsig( SIGALRM );
     addsig( SIGTERM );
+    addsig( SIGQUIT );
     bool stop_server = false;
 
     client_data* users = new client_data[FD_LIMIT]; 
@@ -148,7 +173,9 @@ int main( int argc, char* argv[] )
             {
                 int sig;
                 char signals[1024];
+                printf("recv 1 ......");
                 ret = recv( pipefd[0], signals, sizeof( signals ), 0 );
+                printf("recv 2 ret = %d......", ret);
                 if( ret == -1 )
                 {
                     // handle the error
@@ -219,9 +246,10 @@ int main( int argc, char* argv[] )
                 // others
             }
         }
-
+        //printf("timeout1111 %d\n", timeout);
         if( timeout )
         {
+            printf("timeout %d\n", timeout);
             timer_handler();
             timeout = false;
         }

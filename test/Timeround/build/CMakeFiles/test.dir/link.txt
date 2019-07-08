@@ -1,1 +1,0 @@
-/usr/bin/c++  -O3 -DNDEBUG  -rdynamic CMakeFiles/test.dir/Timeround.cpp.o CMakeFiles/test.dir/test.cpp.o  -o build/Bin/test -lpthread -lpthread 

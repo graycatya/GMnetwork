@@ -11,7 +11,7 @@
             "program": "/home/cat/code/GMnetwork/test/11/build/build/Bin/test",
             "args": ["0.0.0.0", "9000"],
             "stopAtEntry": false,
-            "cwd": "/home/cat/code/GMnetwork/test/11/build/build/Bin",
+            "cwd": "${workspaceFolder}",
             "environment": [],
             "externalConsole": false,
             "MIMode": "gdb",

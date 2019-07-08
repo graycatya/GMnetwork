@@ -1,3 +1,0 @@
-/home/cat/code/GMnetwork/test/Timeround/build/CMakeFiles/rebuild_cache.dir
-/home/cat/code/GMnetwork/test/Timeround/build/CMakeFiles/test.dir
-/home/cat/code/GMnetwork/test/Timeround/build/CMakeFiles/edit_cache.dir

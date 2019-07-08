@@ -1,1 +1,1 @@
-/usr/bin/c++  -O3 -DNDEBUG  -rdynamic CMakeFiles/test.dir/test.cpp.o  -o build/Bin/test -lpthread -lpthread 
+/usr/bin/c++    -rdynamic CMakeFiles/test.dir/test.cpp.o  -o build/Bin/test -lpthread -lpthread 

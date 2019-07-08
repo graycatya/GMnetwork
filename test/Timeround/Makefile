@@ -51,7 +51,7 @@ EQUALS = =
 CMAKE_SOURCE_DIR = /home/cat/code/GMnetwork/test/Timeround
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/cat/code/GMnetwork/test/Timeround/build
+CMAKE_BINARY_DIR = /home/cat/code/GMnetwork/test/Timeround
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/cat/code/GMnetwork/test/Timeround/build/CMakeFiles /home/cat/code/GMnetwork/test/Timeround/build/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cat/code/GMnetwork/test/Timeround/CMakeFiles /home/cat/code/GMnetwork/test/Timeround/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/cat/code/GMnetwork/test/Timeround/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cat/code/GMnetwork/test/Timeround/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -123,59 +123,59 @@ test/fast:
 	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
 .PHONY : test/fast
 
-Timeround.o: Timeround.cpp.o
+CatTimeround.o: CatTimeround.c.o
 
-.PHONY : Timeround.o
+.PHONY : CatTimeround.o
 
 # target to build an object file
-Timeround.cpp.o:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/Timeround.cpp.o
-.PHONY : Timeround.cpp.o
+CatTimeround.c.o:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/CatTimeround.c.o
+.PHONY : CatTimeround.c.o
 
-Timeround.i: Timeround.cpp.i
+CatTimeround.i: CatTimeround.c.i
 
-.PHONY : Timeround.i
+.PHONY : CatTimeround.i
 
 # target to preprocess a source file
-Timeround.cpp.i:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/Timeround.cpp.i
-.PHONY : Timeround.cpp.i
+CatTimeround.c.i:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/CatTimeround.c.i
+.PHONY : CatTimeround.c.i
 
-Timeround.s: Timeround.cpp.s
+CatTimeround.s: CatTimeround.c.s
 
-.PHONY : Timeround.s
+.PHONY : CatTimeround.s
 
 # target to generate assembly for a file
-Timeround.cpp.s:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/Timeround.cpp.s
-.PHONY : Timeround.cpp.s
+CatTimeround.c.s:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/CatTimeround.c.s
+.PHONY : CatTimeround.c.s
 
-test.o: test.cpp.o
+test.o: test.c.o
 
 .PHONY : test.o
 
 # target to build an object file
-test.cpp.o:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test.cpp.o
-.PHONY : test.cpp.o
+test.c.o:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test.c.o
+.PHONY : test.c.o
 
-test.i: test.cpp.i
+test.i: test.c.i
 
 .PHONY : test.i
 
 # target to preprocess a source file
-test.cpp.i:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test.cpp.i
-.PHONY : test.cpp.i
+test.c.i:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test.c.i
+.PHONY : test.c.i
 
-test.s: test.cpp.s
+test.s: test.c.s
 
 .PHONY : test.s
 
 # target to generate assembly for a file
-test.cpp.s:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test.cpp.s
-.PHONY : test.cpp.s
+test.c.s:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test.c.s
+.PHONY : test.c.s
 
 # Help Target
 help:
@@ -186,9 +186,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... edit_cache"
-	@echo "... Timeround.o"
-	@echo "... Timeround.i"
-	@echo "... Timeround.s"
+	@echo "... CatTimeround.o"
+	@echo "... CatTimeround.i"
+	@echo "... CatTimeround.s"
 	@echo "... test.o"
 	@echo "... test.i"
 	@echo "... test.s"

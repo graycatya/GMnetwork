@@ -36,6 +36,23 @@ int Catsetnonblocking(int fd)
 	return old_option;
 }
 
+void set_fl(int fd, int flags)
+{
+	int		val;
+
+	// 获取标志
+	if ((val = fcntl(fd, F_GETFL, 0)) < 0) {
+		//error_ret("fcntl get error");
+	}
+
+	val |= flags;
+
+	// 设置标志
+	if (fcntl(fd, F_SETFL, val) < 0) {
+		//error_ret("fcntl set error");
+	}
+}
+
 //typedef struct epoll_event epoll_event;
 #endif
 

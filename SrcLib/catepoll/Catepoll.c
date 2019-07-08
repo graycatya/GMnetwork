@@ -31,7 +31,9 @@ int Catepoll_addfd(int epfd, int fd, int events)
 	struct epoll_event event;
 	event.events = events;
 	event.data.fd = fd;
-    return epoll_ctl(epfd, EPOLL_CTL_ADD, fd, &event);
+    epoll_ctl(epfd, EPOLL_CTL_ADD, fd, &event);
+    set_fl(fd, O_NONBLOCK);
+    return 0;
 }
 
 int Catepoll_modifyfd(int epfd, int fd, int events)
@@ -55,12 +57,12 @@ int Catepollx_TcpStart(Catepoll_t* catepoll_t)
     int lfd = Cat_TcpScoket(catepoll_t->ip, catepoll_t->port, catepoll_t->sock_family);
     Cat_Listen(lfd, catepoll_t->listens);
     catepoll_t->lfd = lfd;
-    catepoll_t->events = (struct epoll_event*)malloc(sizeof(struct epoll_event) * catepoll_t->WaitSize);
+    //catepoll_t->events = (struct epoll_event*)malloc(sizeof(struct epoll_event) * catepoll_t->WaitSize);
     if((catepoll_t->epfd = Catepoll_Init(catepoll_t->EpollSize, catepoll_t->WaitSize)) < 0)
     {
         Cat_Errexit("Catepoll_Init error");
     }
-    return Catepoll_addfd(catepoll_t->epfd, lfd, EPOLLIN);
+    return Catepoll_addfd(catepoll_t->epfd, lfd, EPOLLIN | EPOLLET | EPOLLRDHUP);
 }
 
 int Catepollx_UdpStart(Catepoll_t* catepoll_t)

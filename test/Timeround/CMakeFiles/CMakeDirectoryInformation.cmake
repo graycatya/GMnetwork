@@ -3,7 +3,7 @@
 
 # Relative path conversion top directories.
 set(CMAKE_RELATIVE_PATH_TOP_SOURCE "/home/cat/code/GMnetwork/test/Timeround")
-set(CMAKE_RELATIVE_PATH_TOP_BINARY "/home/cat/code/GMnetwork/test/Timeround/build")
+set(CMAKE_RELATIVE_PATH_TOP_BINARY "/home/cat/code/GMnetwork/test/Timeround")
 
 # Force unix paths in dependencies.
 set(CMAKE_FORCE_UNIX_PATHS 1)

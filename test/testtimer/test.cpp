@@ -6,20 +6,22 @@
  ************************************************************************/
 
 #include"../../SrcLib/Catdef.h"
-#include"lst_timer.h"
+//#include"lst_timer.h"
+#include"tw_timer.h"
 using namespace std;
 
 #define FD_LIMIT 65535
 #define MAX_EVENT_NUMBER 1024
-#define TIMESLOT 5
+#define TIMESLOT 2
 
 static int pipefd[2];
-static sort_timer_lst timer_lst;
+static time_wheel timer_lst;
 static int epollfd = 0;
 
 int setnonblocking(int fd) {
-    int old_option = fcntl(fd, F_GETFL);
+    int old_option = fcntl(fd, F_GETFL, 0);
     int new_option = old_option | O_NONBLOCK;
+    printf("new_option %d\n", new_option);
     fcntl(fd, F_SETFL, new_option);
     return old_option;
 }
@@ -85,7 +87,8 @@ int main(int argc, char** argv) {
     }
     ret = listen(listenfd, 5);
     assert(ret != -1);
-
+    int on = 1;
+    setsockopt(listenfd, SOL_SOCKET, SO_REUSEADDR, &on, sizeof(int));
     epoll_event events[MAX_EVENT_NUMBER];
     int epollfd = epoll_create(5);
     assert(epollfd != -1);
@@ -96,8 +99,9 @@ int main(int argc, char** argv) {
     setnonblocking(pipefd[1]);
     addfd(epollfd, pipefd[0]);
     
-    //addsig(SIGALRM);
-    //addsig(SIGTERM);
+    addsig(SIGALRM);
+    addsig(SIGTERM);
+    addsig(SIGQUIT);
     bool stop_server = false;
     client_data* users = new client_data[FD_LIMIT];
     bool timeout = false;
@@ -119,13 +123,15 @@ int main(int argc, char** argv) {
                 users[connfd].address = client_address;
                 users[connfd].sockfd = connfd;
                 printf("add_timer... \n");
-                util_timer* timer = new util_timer;
+                tw_timer* timer = timer_lst.add_timer(TIMESLOT);
                 timer -> user_data = &users[connfd];
                 timer -> cb_func = cb_func;
+                users[connfd].timer = timer;
+                /* 
                 time_t cur = time(NULL);
                 timer -> expire = cur + 3 * TIMESLOT;
-                users[connfd].timer = timer;
-                timer_lst.add_timer(timer);
+                */
+                
             }
             else if((sockfd == pipefd[0]) && (events[i].events & EPOLLIN)) {
                 int sig;
@@ -152,7 +158,7 @@ int main(int argc, char** argv) {
                 ret = recv(sockfd, users[sockfd].buf, BUFFER_SIZE, 0);
                 printf("get %d bytes of client data %s from %d\n", ret, users[sockfd].buf, sockfd);
 
-                util_timer* timer = users[sockfd].timer;
+                tw_timer* timer = users[sockfd].timer;
                 if(ret < 0) {
                     if(errno != EAGAIN) {
                         cb_func(&users[sockfd]);
@@ -169,10 +175,10 @@ int main(int argc, char** argv) {
                 }
                 else {
                     if(timer) {
-                        time_t cur = time(NULL);
-                        timer -> expire = cur + 3 * TIMESLOT;
-                        printf("adjust timer once\n");
-                        timer_lst.adjust_timer(timer);
+                        timer_lst.del_timer(timer);
+                        timer->user_data = &users[sockfd];
+                        timer->cb_func = cb_func;
+                        timer_lst.add_timer(TIMESLOT);
                     }
                 }
             }

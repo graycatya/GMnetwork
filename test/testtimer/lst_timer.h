@@ -12,6 +12,7 @@
 #define BUFFER_SIZE 64
 class util_timer;
 
+/* 绑定socket 和定时器 */
 struct client_data {
     sockaddr_in address;
     int sockfd;
@@ -19,6 +20,7 @@ struct client_data {
     util_timer* timer;
 };
 
+/* 定时器类 */
 class util_timer {
 public:
     util_timer() : prev(NULL), next(NULL) {}

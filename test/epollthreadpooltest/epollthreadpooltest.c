@@ -1,6 +1,8 @@
 #include "Catepoll.h"
 #include "catthreadpool.h"
 
+
+
 struct epollpool_s
 {
     int num;
@@ -48,20 +50,27 @@ int main(int argc, char* argv[])
     struct epollpool_s my_epollpool;
     catepoll_t->ip = argv[1];
     catepoll_t->port = atoi(argv[2]);
-    catepoll_t->EpollSize = 1;
+    catepoll_t->EpollSize = 5;
     catepoll_t->listens = 128;
     catepoll_t->maxevents = 1024;
     catepoll_t->WaitSize = 1024;
+    catepoll_t->events = (struct epoll_event*)malloc(sizeof(struct epoll_event) * catepoll_t->WaitSize);
     catepoll_t->events = NULL;
     catepoll_t->sock_family = CAT_IPV4;
     printf(" %s start ..\n", catepoll_t->ip);
     Catepollx_TcpStart(catepoll_t);
+    //set_fl(catepoll_t->lfd, O_NONBLOCK);
+    //set_fl(catepoll_t->lfd, O_NONBLOCK);
+    /* 
+    Catsetnonblocking(catepoll_t->epfd);
+    Catsetnonblocking(catepoll_t->lfd);
+*/
     while(1)
     {
-        int nfds = Catepoll_Wait(catepoll_t->epfd, catepoll_t->events, catepoll_t->maxevents, -1);
-        if(nfds == 0)
+        int nfds = epoll_wait(catepoll_t->epfd, catepoll_t->events, catepoll_t->maxevents, -1);
+        if(nfds < 0)
         {
-            continue;
+            Cat_Errexit("Catepoll_Wait error");
         }
         for(int i = 0; i < nfds; i++)
         {
