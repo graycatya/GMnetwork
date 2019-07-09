@@ -53,6 +53,12 @@ void set_fl(int fd, int flags)
 	}
 }
 
+void Cat_Errexit(const char *s)
+{
+	perror(s);
+	exit(-1);
+}
+
 //typedef struct epoll_event epoll_event;
 #endif
 

@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/cat/code/GMnetwork/test/testtimer/CatTimeround.c
+CatTimeround.h
+/home/cat/code/GMnetwork/test/testtimer/CatTimeround.h
+
+/home/cat/code/GMnetwork/test/testtimer/CatTimeround.h
+time.h
+-
+stdio.h
+-
+

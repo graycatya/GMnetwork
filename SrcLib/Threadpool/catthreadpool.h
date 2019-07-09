@@ -1,5 +1,5 @@
-#ifndef CATTHREADPOOL_H
-#define CATTHREADPOOL_H
+#ifndef _CATTHREADPOOL_H_
+#define _CATTHREADPOOL_H_
 
 #include <stdlib.h>
 #include <pthread.h>
@@ -9,6 +9,10 @@
 #include <string.h>
 #include <signal.h>
 #include <errno.h>
+
+#ifdef  __cplusplus  
+extern "C" {  
+#endif  
 
 enum {
     false,
@@ -56,5 +60,9 @@ int threadpool_add(threadpool_t *pool, void*(*function)(void *arg), void *arg);
 int threadpool_destroy(threadpool_t *pool);
 int threadpool_all_threadnum(threadpool_t *pool);
 int threadpool_busy_threadnum(threadpool_t *pool);
+
+#ifdef  __cplusplus  
+}  
+#endif  /* end of __cplusplus */
 
 #endif

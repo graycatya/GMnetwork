@@ -9,8 +9,6 @@ CAT_IPV6
 };
 
 
-void Cat_Errexit(const char *s);
-
 int Cat_Socket(int family, int sockettype, int protocol);
 
 int Cat_Bind(int fd, struct sockaddr *addr, void* addrlen);

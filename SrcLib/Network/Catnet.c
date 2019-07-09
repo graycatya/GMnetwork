@@ -1,11 +1,5 @@
 #include "Catnet.h"
 
-void Cat_Errexit(const char *s)
-{
-	perror(s);
-	exit(-1);
-}
-
 int Cat_Socket(int family, int sockettype, int protocol)
 {
 	int sock;

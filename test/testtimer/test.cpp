@@ -6,16 +6,26 @@
  ************************************************************************/
 
 #include"../../SrcLib/Catdef.h"
-//#include"lst_timer.h"
-#include"tw_timer.h"
+
+#include "CatTimeround.h"
 using namespace std;
 
 #define FD_LIMIT 65535
 #define MAX_EVENT_NUMBER 1024
-#define TIMESLOT 2
+#define TIMESLOT 10
+#define BUFFER_SIZE 64
+
+struct my_timers
+{
+    sockaddr_in address;
+    int sockfd;
+    char buf[BUFFER_SIZE];
+    timerevent_t* timer;
+};
+
 
 static int pipefd[2];
-static time_wheel timer_lst;
+static timerwheel_t* timer_lst = NULL;
 static int epollfd = 0;
 
 int setnonblocking(int fd) {
@@ -51,11 +61,12 @@ void addsig(int sig) {
 }
 
 void timer_handler() {
-    timer_lst.tick();
+    Cat_timerwheel_tick(timer_lst);
     alarm(TIMESLOT);
 }
 
-void cb_func(client_data* user_data) {
+void cb_func(void* user_datas) {
+    my_timers* user_data = (my_timers*)user_datas;
     epoll_ctl(epollfd, EPOLL_CTL_DEL, user_data -> sockfd, 0);
     assert(user_data);
     close(user_data -> sockfd);
@@ -103,7 +114,8 @@ int main(int argc, char** argv) {
     addsig(SIGTERM);
     addsig(SIGQUIT);
     bool stop_server = false;
-    client_data* users = new client_data[FD_LIMIT];
+    timer_lst = Cat_timerwheel_create(30, TIMESLOT);
+    struct my_timers* users = new struct my_timers[FD_LIMIT];
     bool timeout = false;
     alarm(TIMESLOT);
 
@@ -123,9 +135,9 @@ int main(int argc, char** argv) {
                 users[connfd].address = client_address;
                 users[connfd].sockfd = connfd;
                 printf("add_timer... \n");
-                tw_timer* timer = timer_lst.add_timer(TIMESLOT);
-                timer -> user_data = &users[connfd];
-                timer -> cb_func = cb_func;
+                timerevent_t* timer = Cat_add_timerevent(timer_lst, TIMESLOT);
+                timer -> arg = &users[connfd];
+                timer -> function = cb_func;
                 users[connfd].timer = timer;
                 /* 
                 time_t cur = time(NULL);
@@ -158,27 +170,30 @@ int main(int argc, char** argv) {
                 ret = recv(sockfd, users[sockfd].buf, BUFFER_SIZE, 0);
                 printf("get %d bytes of client data %s from %d\n", ret, users[sockfd].buf, sockfd);
 
-                tw_timer* timer = users[sockfd].timer;
+                timerevent_t* timer = users[sockfd].timer;
                 if(ret < 0) {
                     if(errno != EAGAIN) {
                         cb_func(&users[sockfd]);
                         if(timer) {
-                            timer_lst.del_timer(timer);
+                            Cat_del_timerevent(timer_lst, timer);
+                            //timer_lst.del_timer(timer);
                         }
                     }
                 }
                 else if(ret == 0) {
                     cb_func(&users[sockfd]);
                     if(timer) {
-                        timer_lst.del_timer(timer);
+                        Cat_del_timerevent(timer_lst, timer);
+                        //timer_lst.del_timer(timer);
                     }
                 }
                 else {
                     if(timer) {
-                        timer_lst.del_timer(timer);
-                        timer->user_data = &users[sockfd];
-                        timer->cb_func = cb_func;
-                        timer_lst.add_timer(TIMESLOT);
+                        Cat_del_timerevent(timer_lst, timer);
+                        timer = Cat_add_timerevent(timer_lst, TIMESLOT);
+                        timer->arg = &users[sockfd];
+                        timer->function = cb_func;
+                        users[sockfd].timer = timer;
                     }
                 }
             }
@@ -194,5 +209,6 @@ int main(int argc, char** argv) {
     close(pipefd[1]);
     close(pipefd[0]);
     delete [] users;
+    Cat_timerwheel_delete(timer_lst);
     return 0;
 }

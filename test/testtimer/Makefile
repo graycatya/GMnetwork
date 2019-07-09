@@ -123,6 +123,33 @@ test/fast:
 	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
 .PHONY : test/fast
 
+CatTimeround.o: CatTimeround.c.o
+
+.PHONY : CatTimeround.o
+
+# target to build an object file
+CatTimeround.c.o:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/CatTimeround.c.o
+.PHONY : CatTimeround.c.o
+
+CatTimeround.i: CatTimeround.c.i
+
+.PHONY : CatTimeround.i
+
+# target to preprocess a source file
+CatTimeround.c.i:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/CatTimeround.c.i
+.PHONY : CatTimeround.c.i
+
+CatTimeround.s: CatTimeround.c.s
+
+.PHONY : CatTimeround.s
+
+# target to generate assembly for a file
+CatTimeround.c.s:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/CatTimeround.c.s
+.PHONY : CatTimeround.c.s
+
 test.o: test.cpp.o
 
 .PHONY : test.o
@@ -159,6 +186,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... test"
 	@echo "... edit_cache"
+	@echo "... CatTimeround.o"
+	@echo "... CatTimeround.i"
+	@echo "... CatTimeround.s"
 	@echo "... test.o"
 	@echo "... test.i"
 	@echo "... test.s"
