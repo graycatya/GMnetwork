@@ -1,0 +1,1 @@
+/usr/bin/cc   -rdynamic CMakeFiles/test.dir/test.c.o CMakeFiles/test.dir/twheel.c.o  -o build/Bin/test -lpthread -lpthread 

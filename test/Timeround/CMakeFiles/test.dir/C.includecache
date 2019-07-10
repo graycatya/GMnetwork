@@ -1,0 +1,44 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/cat/code/GMnetwork/test/Timeround/test.c
+twheel.h
+/home/cat/code/GMnetwork/test/Timeround/twheel.h
+stdlib.h
+-
+stdio.h
+-
+inttypes.h
+-
+unistd.h
+-
+pthread.h
+-
+time.h
+-
+string.h
+-
+
+/home/cat/code/GMnetwork/test/Timeround/twheel.c
+twheel.h
+/home/cat/code/GMnetwork/test/Timeround/twheel.h
+stdlib.h
+-
+stdio.h
+-
+assert.h
+-
+string.h
+-
+inttypes.h
+-
+
+/home/cat/code/GMnetwork/test/Timeround/twheel.h
+stdint.h
+-
+

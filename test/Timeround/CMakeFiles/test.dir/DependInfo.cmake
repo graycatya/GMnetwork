@@ -4,7 +4,8 @@ set(CMAKE_DEPENDS_LANGUAGES
   )
 # The set of files for implicit dependencies of each language:
 set(CMAKE_DEPENDS_CHECK_C
-  "/home/cat/code/GMnetwork/SrcLib/Timeround/CatTimeround.c" "/home/cat/code/GMnetwork/SrcLib/Timeround/CMakeFiles/CatTimeround.dir/CatTimeround.c.o"
+  "/home/cat/code/GMnetwork/test/Timeround/test.c" "/home/cat/code/GMnetwork/test/Timeround/CMakeFiles/test.dir/test.c.o"
+  "/home/cat/code/GMnetwork/test/Timeround/twheel.c" "/home/cat/code/GMnetwork/test/Timeround/CMakeFiles/test.dir/twheel.c.o"
   )
 set(CMAKE_C_COMPILER_ID "GNU")
 

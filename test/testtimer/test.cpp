@@ -114,7 +114,7 @@ int main(int argc, char** argv) {
     addsig(SIGTERM);
     addsig(SIGQUIT);
     bool stop_server = false;
-    timer_lst = Cat_timerwheel_create(30, TIMESLOT);
+    timer_lst = Cat_timerwheel_create(30, 1);
     struct my_timers* users = new struct my_timers[FD_LIMIT];
     bool timeout = false;
     alarm(TIMESLOT);
@@ -135,7 +135,7 @@ int main(int argc, char** argv) {
                 users[connfd].address = client_address;
                 users[connfd].sockfd = connfd;
                 printf("add_timer... \n");
-                timerevent_t* timer = Cat_add_timerevent(timer_lst, TIMESLOT);
+                timerevent_t* timer = Cat_add_timerevent(timer_lst, 1);
                 timer -> arg = &users[connfd];
                 timer -> function = cb_func;
                 users[connfd].timer = timer;
@@ -190,7 +190,7 @@ int main(int argc, char** argv) {
                 else {
                     if(timer) {
                         Cat_del_timerevent(timer_lst, timer);
-                        timer = Cat_add_timerevent(timer_lst, TIMESLOT);
+                        timer = Cat_add_timerevent(timer_lst, 1);
                         timer->arg = &users[sockfd];
                         timer->function = cb_func;
                         users[sockfd].timer = timer;

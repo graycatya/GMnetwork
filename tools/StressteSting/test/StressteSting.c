@@ -1,6 +1,6 @@
 #include "Catnet.h"
 
-static const char* request = "GET http://localhost/index.html HTTP/1.1\r\nConnection: keep-alive\r\n\r\nxxxxxxxxxxxxx";
+static const char* request = "test ........................... test .";
 
 int setnonblocking(int fd)
 {

@@ -78,6 +78,7 @@ timerevent_t* Cat_add_timerevent(timerwheel_t* timerwheel, int timeout)
     }
     else
     {
+        printf("add timer, rotation is %d, ts is %d, cur_slot is %d\n", timer->rotation, ts, timerwheel->current_slot);
         /* 新结点插入头结点 */
         timer->next = timerwheel->slots[ts];
         timerwheel->slots[ts]->prev = timer;

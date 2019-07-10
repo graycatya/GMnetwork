@@ -48,10 +48,10 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/cat/code/GMnetwork/SrcLib/Timeround
+CMAKE_SOURCE_DIR = /home/cat/code/GMnetwork/test/Timeround
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/cat/code/GMnetwork/SrcLib/Timeround
+CMAKE_BINARY_DIR = /home/cat/code/GMnetwork/test/Timeround
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -80,9 +80,9 @@ edit_cache/fast: edit_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/cat/code/GMnetwork/SrcLib/Timeround/CMakeFiles /home/cat/code/GMnetwork/SrcLib/Timeround/CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cat/code/GMnetwork/test/Timeround/CMakeFiles /home/cat/code/GMnetwork/test/Timeround/CMakeFiles/progress.marks
 	$(MAKE) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/cat/code/GMnetwork/SrcLib/Timeround/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cat/code/GMnetwork/test/Timeround/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -111,44 +111,71 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named CatTimeround
+# Target rules for targets named test
 
 # Build rule for target.
-CatTimeround: cmake_check_build_system
-	$(MAKE) -f CMakeFiles/Makefile2 CatTimeround
-.PHONY : CatTimeround
+test: cmake_check_build_system
+	$(MAKE) -f CMakeFiles/Makefile2 test
+.PHONY : test
 
 # fast build rule for target.
-CatTimeround/fast:
-	$(MAKE) -f CMakeFiles/CatTimeround.dir/build.make CMakeFiles/CatTimeround.dir/build
-.PHONY : CatTimeround/fast
+test/fast:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
+.PHONY : test/fast
 
-CatTimeround.o: CatTimeround.c.o
+test.o: test.c.o
 
-.PHONY : CatTimeround.o
+.PHONY : test.o
 
 # target to build an object file
-CatTimeround.c.o:
-	$(MAKE) -f CMakeFiles/CatTimeround.dir/build.make CMakeFiles/CatTimeround.dir/CatTimeround.c.o
-.PHONY : CatTimeround.c.o
+test.c.o:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test.c.o
+.PHONY : test.c.o
 
-CatTimeround.i: CatTimeround.c.i
+test.i: test.c.i
 
-.PHONY : CatTimeround.i
+.PHONY : test.i
 
 # target to preprocess a source file
-CatTimeround.c.i:
-	$(MAKE) -f CMakeFiles/CatTimeround.dir/build.make CMakeFiles/CatTimeround.dir/CatTimeround.c.i
-.PHONY : CatTimeround.c.i
+test.c.i:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test.c.i
+.PHONY : test.c.i
 
-CatTimeround.s: CatTimeround.c.s
+test.s: test.c.s
 
-.PHONY : CatTimeround.s
+.PHONY : test.s
 
 # target to generate assembly for a file
-CatTimeround.c.s:
-	$(MAKE) -f CMakeFiles/CatTimeround.dir/build.make CMakeFiles/CatTimeround.dir/CatTimeround.c.s
-.PHONY : CatTimeround.c.s
+test.c.s:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/test.c.s
+.PHONY : test.c.s
+
+twheel.o: twheel.c.o
+
+.PHONY : twheel.o
+
+# target to build an object file
+twheel.c.o:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/twheel.c.o
+.PHONY : twheel.c.o
+
+twheel.i: twheel.c.i
+
+.PHONY : twheel.i
+
+# target to preprocess a source file
+twheel.c.i:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/twheel.c.i
+.PHONY : twheel.c.i
+
+twheel.s: twheel.c.s
+
+.PHONY : twheel.s
+
+# target to generate assembly for a file
+twheel.c.s:
+	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/twheel.c.s
+.PHONY : twheel.c.s
 
 # Help Target
 help:
@@ -157,11 +184,14 @@ help:
 	@echo "... clean"
 	@echo "... depend"
 	@echo "... rebuild_cache"
-	@echo "... CatTimeround"
+	@echo "... test"
 	@echo "... edit_cache"
-	@echo "... CatTimeround.o"
-	@echo "... CatTimeround.i"
-	@echo "... CatTimeround.s"
+	@echo "... test.o"
+	@echo "... test.i"
+	@echo "... test.s"
+	@echo "... twheel.o"
+	@echo "... twheel.i"
+	@echo "... twheel.s"
 .PHONY : help
 
 
