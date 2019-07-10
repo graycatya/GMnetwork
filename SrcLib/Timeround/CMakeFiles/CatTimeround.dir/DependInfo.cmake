@@ -1,16 +1,15 @@
 # The set of languages for which implicit dependencies are needed:
 set(CMAKE_DEPENDS_LANGUAGES
-  "CXX"
+  "C"
   )
 # The set of files for implicit dependencies of each language:
-set(CMAKE_DEPENDS_CHECK_CXX
-  "/home/cat/code/GMnetwork/test/testtimer/test.cpp" "/home/cat/code/GMnetwork/test/testtimer/CMakeFiles/test.dir/test.cpp.o"
+set(CMAKE_DEPENDS_CHECK_C
+  "/home/cat/code/GMnetwork/SrcLib/Timeround/CatTimeround.c" "/home/cat/code/GMnetwork/SrcLib/Timeround/CMakeFiles/CatTimeround.dir/CatTimeround.c.o"
   )
-set(CMAKE_CXX_COMPILER_ID "GNU")
+set(CMAKE_C_COMPILER_ID "GNU")
 
 # The include file search paths:
-set(CMAKE_CXX_TARGET_INCLUDE_PATH
-  "../../SrcLib/Timeround"
+set(CMAKE_C_TARGET_INCLUDE_PATH
   )
 
 # Targets to which this target links.

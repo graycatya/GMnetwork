@@ -6,6 +6,14 @@
 
 #IncludeRegexTransform: 
 
+../../SrcLib/Timeround/CatTimeround.h
+time.h
+-
+stdio.h
+-
+stdlib.h
+-
+
 /home/cat/code/GMnetwork/SrcLib/Catdef.h
 stdlib.h
 -
@@ -48,12 +56,6 @@ sys/epoll.h
 sys/select.h
 -
 signal.h
--
-
-/home/cat/code/GMnetwork/test/testtimer/CatTimeround.h
-time.h
--
-stdio.h
 -
 
 /home/cat/code/GMnetwork/test/testtimer/test.cpp

@@ -19,17 +19,15 @@ if(_WINDOWSSYS_)
 endif(_WINDOWSSYS_)
 
 # 库路径
-#set(INC_DIR ${PROJECT_SOURCE_DIR}/../../SrcLib/catepoll
-#           ${PROJECT_SOURCE_DIR}/../../SrcLib/Network)
-#set(LINK_DIR ${PROJECT_SOURCE_DIR}/../../SrcLib/catepoll
-#           ${PROJECT_SOURCE_DIR}/../../SrcLib/Network)
+set(INC_DIR ${PROJECT_SOURCE_DIR}/../../SrcLib/Timeround)
+set(LINK_DIR ${PROJECT_SOURCE_DIR}/../../SrcLib/Timeround)
 
-#include_directories(${INC_DIR})
-#link_directories(${LINK_DIR})
-#link_libraries(catepoll)
+include_directories(${INC_DIR})
+link_directories(${LINK_DIR})
+link_libraries(CatTimeround)
 #link_libraries(Catnetwork)
 
-link_libraries(pthread)
+#link_libraries(pthread)
 
 
 # 查找当前目标下所有的源文件
@@ -37,7 +35,7 @@ aux_source_directory(. DIR_SRCS)
 
 # 指定生成目录
 add_executable(test ${DIR_SRCS})
-target_link_libraries(test pthread)
+target_link_libraries(test CatTimeround)
 #target_link_libraries(test catepoll)
 #target_link_libraries(test Catnetwork)
 

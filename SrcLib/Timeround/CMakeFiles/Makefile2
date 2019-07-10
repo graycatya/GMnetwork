@@ -54,45 +54,45 @@ RM = /usr/bin/cmake -E remove -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/cat/code/GMnetwork/test/testtimer
+CMAKE_SOURCE_DIR = /home/cat/code/GMnetwork/SrcLib/Timeround
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/cat/code/GMnetwork/test/testtimer
+CMAKE_BINARY_DIR = /home/cat/code/GMnetwork/SrcLib/Timeround
 
 #=============================================================================
-# Target rules for target CMakeFiles/test.dir
+# Target rules for target CMakeFiles/CatTimeround.dir
 
 # All Build rule for target.
-CMakeFiles/test.dir/all:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/depend
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/cat/code/GMnetwork/test/testtimer/CMakeFiles --progress-num=1,2 "Built target test"
-.PHONY : CMakeFiles/test.dir/all
+CMakeFiles/CatTimeround.dir/all:
+	$(MAKE) -f CMakeFiles/CatTimeround.dir/build.make CMakeFiles/CatTimeround.dir/depend
+	$(MAKE) -f CMakeFiles/CatTimeround.dir/build.make CMakeFiles/CatTimeround.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/cat/code/GMnetwork/SrcLib/Timeround/CMakeFiles --progress-num=1,2 "Built target CatTimeround"
+.PHONY : CMakeFiles/CatTimeround.dir/all
 
 # Include target in all.
-all: CMakeFiles/test.dir/all
+all: CMakeFiles/CatTimeround.dir/all
 
 .PHONY : all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/test.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/cat/code/GMnetwork/test/testtimer/CMakeFiles 2
-	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/test.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/cat/code/GMnetwork/test/testtimer/CMakeFiles 0
-.PHONY : CMakeFiles/test.dir/rule
+CMakeFiles/CatTimeround.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cat/code/GMnetwork/SrcLib/Timeround/CMakeFiles 2
+	$(MAKE) -f CMakeFiles/Makefile2 CMakeFiles/CatTimeround.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/cat/code/GMnetwork/SrcLib/Timeround/CMakeFiles 0
+.PHONY : CMakeFiles/CatTimeround.dir/rule
 
 # Convenience name for target.
-test: CMakeFiles/test.dir/rule
+CatTimeround: CMakeFiles/CatTimeround.dir/rule
 
-.PHONY : test
-
-# clean rule for target.
-CMakeFiles/test.dir/clean:
-	$(MAKE) -f CMakeFiles/test.dir/build.make CMakeFiles/test.dir/clean
-.PHONY : CMakeFiles/test.dir/clean
+.PHONY : CatTimeround
 
 # clean rule for target.
-clean: CMakeFiles/test.dir/clean
+CMakeFiles/CatTimeround.dir/clean:
+	$(MAKE) -f CMakeFiles/CatTimeround.dir/build.make CMakeFiles/CatTimeround.dir/clean
+.PHONY : CMakeFiles/CatTimeround.dir/clean
+
+# clean rule for target.
+clean: CMakeFiles/CatTimeround.dir/clean
 
 .PHONY : clean
 

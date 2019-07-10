@@ -1,12 +1,13 @@
 #ifndef _CATTIMEROUND_H_
 #define _CATTIMEROUND_H_
 
-#include <time.h>
-#include <stdio.h>
-
 #ifdef  __cplusplus  
 extern "C" {  
 #endif  
+
+#include <time.h>
+#include <stdio.h>
+#include <stdlib.h>
 
 struct _timerevent_t
 {

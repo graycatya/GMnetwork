@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC   -shared -Wl,-soname,libCatTimeround.so -o libCatTimeround.so CMakeFiles/CatTimeround.dir/CatTimeround.c.o 
