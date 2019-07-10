@@ -123,11 +123,13 @@ void Cat_timerwheel_tick( timerwheel_t* timerwheel )
     while(timerevent)
     {
         printf( "tick the timer once\n" );
+        /* 如果定时器的rotation值大于0，则它在这一轮不起作用 */
         if(timerevent->rotation > 0)
         {
             timerevent->rotation = timerevent->rotation - 1;
             timerevent = timerevent->next;
         }
+        /* 否则，说明定时器已经到期，于是执行定时任务，然后删除该定时器 */
         else
         {
             /* code */
@@ -157,5 +159,6 @@ void Cat_timerwheel_tick( timerwheel_t* timerwheel )
             
         }
     }
+    /* 时间轮转动 */
     timerwheel->current_slot = (timerwheel->current_slot+1) % timerwheel->slot_n;
 }
