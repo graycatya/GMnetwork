@@ -1,0 +1,3 @@
+/home/cat/code/GMnetwork/test/epolltest/C+epoll/CMakeFiles/rebuild_cache.dir
+/home/cat/code/GMnetwork/test/epolltest/C+epoll/CMakeFiles/epolltest.dir
+/home/cat/code/GMnetwork/test/epolltest/C+epoll/CMakeFiles/edit_cache.dir
