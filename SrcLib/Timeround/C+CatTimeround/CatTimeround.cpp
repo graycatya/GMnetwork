@@ -131,5 +131,5 @@ void CATTIMERROUND::TimerWheel::tick()
             }
         }
     }
-    current_slot = ++current_slot % slot_n;
+    current_slot = (current_slot+1) % slot_n;
 }

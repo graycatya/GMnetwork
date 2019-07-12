@@ -1,0 +1,3 @@
+/home/cat/code/GMnetwork/SrcLib/Timeround/C+CatTimeround/CMakeFiles/rebuild_cache.dir
+/home/cat/code/GMnetwork/SrcLib/Timeround/C+CatTimeround/CMakeFiles/CatTimeround+.dir
+/home/cat/code/GMnetwork/SrcLib/Timeround/C+CatTimeround/CMakeFiles/edit_cache.dir
