@@ -5,7 +5,7 @@
 #include <list>
 #include <deque>
 #include <pthread.h>
-
+#include <signal.h>
 
 namespace CATTHREADPOOL
 {
