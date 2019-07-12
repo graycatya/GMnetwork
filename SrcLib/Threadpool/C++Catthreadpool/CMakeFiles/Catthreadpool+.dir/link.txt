@@ -1,0 +1,2 @@
+/usr/bin/ar qc libCatthreadpool+.a  CMakeFiles/Catthreadpool+.dir/Catthreadpool.cpp.o
+/usr/bin/ranlib libCatthreadpool+.a

@@ -18,13 +18,13 @@ link_libraries(pthread)
 
 # 指定生成 Catthreadpool 链接库
 if(_SOORDLL_)
-    add_library(Catthreadpool SHARED ${DIR_LIB_SRCS})
+    add_library(Catthreadpool+ SHARED ${DIR_LIB_SRCS})
 else()
-    add_library(Catthreadpool ${DIR_LIB_SRCS}) 
+    add_library(Catthreadpool+ ${DIR_LIB_SRCS}) 
 endif(_SOORDLL_)
-target_link_libraries(Catthreadpool pthread)
+target_link_libraries(Catthreadpool+ pthread)
 
 if(_WINDOWSSYS_)
-    target_link_libraries(Catthreadpool ws2_32)
-    target_link_libraries(Catthreadpool wsock32) 
+    target_link_libraries(Catthreadpool+ ws2_32)
+    target_link_libraries(Catthreadpool+ wsock32) 
 endif(_WINDOWSSYS_)
