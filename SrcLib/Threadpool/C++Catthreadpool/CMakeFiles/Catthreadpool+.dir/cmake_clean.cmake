@@ -1,5 +1,5 @@
 file(REMOVE_RECURSE
-  "CMakeFiles/Catthreadpool+.dir/Catthreadpool.cpp.o"
+  "CMakeFiles/Catthreadpool+.dir/Threadpool.cpp.o"
   "libCatthreadpool+.pdb"
   "libCatthreadpool+.so"
 )

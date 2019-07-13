@@ -1,1 +1,1 @@
-/usr/bin/c++ -fPIC   -shared -Wl,-soname,libCatthreadpool+.so -o libCatthreadpool+.so CMakeFiles/Catthreadpool+.dir/Catthreadpool.cpp.o -lpthread -lpthread 
+/usr/bin/c++ -fPIC   -shared -Wl,-soname,libCatthreadpool+.so -o libCatthreadpool+.so CMakeFiles/Catthreadpool+.dir/Threadpool.cpp.o -lpthread -lpthread 

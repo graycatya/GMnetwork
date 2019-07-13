@@ -6,13 +6,13 @@
 
 #IncludeRegexTransform: 
 
-/home/cat/code/GMnetwork/SrcLib/Threadpool/C++Catthreadpool/Catthreadpool.cpp
-Catthreadpool.h
-/home/cat/code/GMnetwork/SrcLib/Threadpool/C++Catthreadpool/Catthreadpool.h
+/home/cat/code/GMnetwork/SrcLib/Threadpool/C++Catthreadpool/Threadpool.cpp
+Threadpool.h
+/home/cat/code/GMnetwork/SrcLib/Threadpool/C++Catthreadpool/Threadpool.h
 unistd.h
 -
 
-/home/cat/code/GMnetwork/SrcLib/Threadpool/C++Catthreadpool/Catthreadpool.h
+/home/cat/code/GMnetwork/SrcLib/Threadpool/C++Catthreadpool/Threadpool.h
 iostream
 -
 vector

@@ -6,7 +6,7 @@
 
 #IncludeRegexTransform: 
 
-/home/cat/code/GMnetwork/SrcLib/Threadpool/C++Catthreadpool/Catthreadpool.h
+/home/cat/code/GMnetwork/SrcLib/Threadpool/C++Catthreadpool/Threadpool.h
 iostream
 -
 vector
@@ -21,8 +21,8 @@ signal.h
 -
 
 /home/cat/code/GMnetwork/test/testC+threadpool/testx.cpp
-../../SrcLib/Threadpool/C++Catthreadpool/Catthreadpool.h
-/home/cat/code/GMnetwork/SrcLib/Threadpool/C++Catthreadpool/Catthreadpool.h
+../../SrcLib/Threadpool/C++Catthreadpool/Threadpool.h
+/home/cat/code/GMnetwork/SrcLib/Threadpool/C++Catthreadpool/Threadpool.h
 unistd.h
 -
 

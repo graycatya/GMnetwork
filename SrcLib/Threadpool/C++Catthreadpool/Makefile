@@ -123,32 +123,32 @@ Catthreadpool+/fast:
 	$(MAKE) -f CMakeFiles/Catthreadpool+.dir/build.make CMakeFiles/Catthreadpool+.dir/build
 .PHONY : Catthreadpool+/fast
 
-Catthreadpool.o: Catthreadpool.cpp.o
+Threadpool.o: Threadpool.cpp.o
 
-.PHONY : Catthreadpool.o
+.PHONY : Threadpool.o
 
 # target to build an object file
-Catthreadpool.cpp.o:
-	$(MAKE) -f CMakeFiles/Catthreadpool+.dir/build.make CMakeFiles/Catthreadpool+.dir/Catthreadpool.cpp.o
-.PHONY : Catthreadpool.cpp.o
+Threadpool.cpp.o:
+	$(MAKE) -f CMakeFiles/Catthreadpool+.dir/build.make CMakeFiles/Catthreadpool+.dir/Threadpool.cpp.o
+.PHONY : Threadpool.cpp.o
 
-Catthreadpool.i: Catthreadpool.cpp.i
+Threadpool.i: Threadpool.cpp.i
 
-.PHONY : Catthreadpool.i
+.PHONY : Threadpool.i
 
 # target to preprocess a source file
-Catthreadpool.cpp.i:
-	$(MAKE) -f CMakeFiles/Catthreadpool+.dir/build.make CMakeFiles/Catthreadpool+.dir/Catthreadpool.cpp.i
-.PHONY : Catthreadpool.cpp.i
+Threadpool.cpp.i:
+	$(MAKE) -f CMakeFiles/Catthreadpool+.dir/build.make CMakeFiles/Catthreadpool+.dir/Threadpool.cpp.i
+.PHONY : Threadpool.cpp.i
 
-Catthreadpool.s: Catthreadpool.cpp.s
+Threadpool.s: Threadpool.cpp.s
 
-.PHONY : Catthreadpool.s
+.PHONY : Threadpool.s
 
 # target to generate assembly for a file
-Catthreadpool.cpp.s:
-	$(MAKE) -f CMakeFiles/Catthreadpool+.dir/build.make CMakeFiles/Catthreadpool+.dir/Catthreadpool.cpp.s
-.PHONY : Catthreadpool.cpp.s
+Threadpool.cpp.s:
+	$(MAKE) -f CMakeFiles/Catthreadpool+.dir/build.make CMakeFiles/Catthreadpool+.dir/Threadpool.cpp.s
+.PHONY : Threadpool.cpp.s
 
 # Help Target
 help:
@@ -159,9 +159,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... Catthreadpool+"
 	@echo "... edit_cache"
-	@echo "... Catthreadpool.o"
-	@echo "... Catthreadpool.i"
-	@echo "... Catthreadpool.s"
+	@echo "... Threadpool.o"
+	@echo "... Threadpool.i"
+	@echo "... Threadpool.s"
 .PHONY : help
 
 

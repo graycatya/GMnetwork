@@ -16,9 +16,10 @@ namespace CATTHREADPOOL
         public:
             struct threadevent_t
             {
+                threadevent_t(void*(*func)(void* arg), void* arg)
+                                 : function(func), arg(arg) {}
                 void*(*function)(void* arg);
                 void* arg;
-                threadevent_t(void*(*func)(void* arg), void* arg) : function(func), arg(arg) {}
             };
             CatThreadPool(int max_thread_num, int min_thread_num, int queue_max_size = 20);
             ~CatThreadPool();
@@ -39,10 +40,9 @@ namespace CATTHREADPOOL
             pthread_cond_t queue_not_full;    /* 当任务队列满时， 添加任务的线程阻塞， */
             pthread_cond_t queue_not_empty;   /* 任务队列里不为空时，ongzhi通知等待任务线程 */
 
-            pthread_t * threads;     /* 存放线程池中每个线程的tid。数组 */
+            pthread_t* threads = nullptr;     /* 存放线程池中每个线程的tid。数组 */
             pthread_t adjust_tid;   /* 管理线程tid */
             std::deque<threadevent_t*> task_queue;  /* 任务队列(数组首地址) */
-            void *task_queue_custom = nullptr;    /* 自定义任务队列 */
 
             int max_thread_num;         /* 线程池最大线程数 */
             int min_thread_num;         /* 线程池最小线程数 */
@@ -53,9 +53,6 @@ namespace CATTHREADPOOL
             int del_threadnum = 10;          /* 每次销毁的线程个数 */
             unsigned int tick_time = 10;              /* 管理者线程心跳时间 */
 
-            //int queue_front;        /* task_queue队头下标 */
-            //int queue_rear;         /* task_queue队尾下标 */
-            //int queue_size;         /* task_queue队中实际任务数 */
             int queue_max_size;     /* task_queue队列可容纳任务上限 */
 
             bool shutdown = false;       /* 标志位，线程池使用状态，true or false */

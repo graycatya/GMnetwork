@@ -1,4 +1,4 @@
-#include "../../SrcLib/Threadpool/C++Catthreadpool/Catthreadpool.h"
+#include "../../SrcLib/Threadpool/C++Catthreadpool/Threadpool.h"
 #include<unistd.h>
 using namespace CATTHREADPOOL;
 using namespace std;
@@ -14,6 +14,6 @@ int main()
 {
     CatThreadPool th(20, 5, 10);
     th.AddThreads(test, (void*)1);
-    sleep(20);
+    //sleep(3);
     return 0;
 }

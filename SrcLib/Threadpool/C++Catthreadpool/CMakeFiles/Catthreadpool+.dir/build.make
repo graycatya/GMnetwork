@@ -57,38 +57,38 @@ include CMakeFiles/Catthreadpool+.dir/progress.make
 # Include the compile flags for this target's objects.
 include CMakeFiles/Catthreadpool+.dir/flags.make
 
-CMakeFiles/Catthreadpool+.dir/Catthreadpool.cpp.o: CMakeFiles/Catthreadpool+.dir/flags.make
-CMakeFiles/Catthreadpool+.dir/Catthreadpool.cpp.o: Catthreadpool.cpp
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cat/code/GMnetwork/SrcLib/Threadpool/C++Catthreadpool/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Catthreadpool+.dir/Catthreadpool.cpp.o"
-	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catthreadpool+.dir/Catthreadpool.cpp.o -c /home/cat/code/GMnetwork/SrcLib/Threadpool/C++Catthreadpool/Catthreadpool.cpp
+CMakeFiles/Catthreadpool+.dir/Threadpool.cpp.o: CMakeFiles/Catthreadpool+.dir/flags.make
+CMakeFiles/Catthreadpool+.dir/Threadpool.cpp.o: Threadpool.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/cat/code/GMnetwork/SrcLib/Threadpool/C++Catthreadpool/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/Catthreadpool+.dir/Threadpool.cpp.o"
+	/usr/bin/c++  $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -o CMakeFiles/Catthreadpool+.dir/Threadpool.cpp.o -c /home/cat/code/GMnetwork/SrcLib/Threadpool/C++Catthreadpool/Threadpool.cpp
 
-CMakeFiles/Catthreadpool+.dir/Catthreadpool.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catthreadpool+.dir/Catthreadpool.cpp.i"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/cat/code/GMnetwork/SrcLib/Threadpool/C++Catthreadpool/Catthreadpool.cpp > CMakeFiles/Catthreadpool+.dir/Catthreadpool.cpp.i
+CMakeFiles/Catthreadpool+.dir/Threadpool.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/Catthreadpool+.dir/Threadpool.cpp.i"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/cat/code/GMnetwork/SrcLib/Threadpool/C++Catthreadpool/Threadpool.cpp > CMakeFiles/Catthreadpool+.dir/Threadpool.cpp.i
 
-CMakeFiles/Catthreadpool+.dir/Catthreadpool.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catthreadpool+.dir/Catthreadpool.cpp.s"
-	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cat/code/GMnetwork/SrcLib/Threadpool/C++Catthreadpool/Catthreadpool.cpp -o CMakeFiles/Catthreadpool+.dir/Catthreadpool.cpp.s
+CMakeFiles/Catthreadpool+.dir/Threadpool.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/Catthreadpool+.dir/Threadpool.cpp.s"
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/cat/code/GMnetwork/SrcLib/Threadpool/C++Catthreadpool/Threadpool.cpp -o CMakeFiles/Catthreadpool+.dir/Threadpool.cpp.s
 
-CMakeFiles/Catthreadpool+.dir/Catthreadpool.cpp.o.requires:
+CMakeFiles/Catthreadpool+.dir/Threadpool.cpp.o.requires:
 
-.PHONY : CMakeFiles/Catthreadpool+.dir/Catthreadpool.cpp.o.requires
+.PHONY : CMakeFiles/Catthreadpool+.dir/Threadpool.cpp.o.requires
 
-CMakeFiles/Catthreadpool+.dir/Catthreadpool.cpp.o.provides: CMakeFiles/Catthreadpool+.dir/Catthreadpool.cpp.o.requires
-	$(MAKE) -f CMakeFiles/Catthreadpool+.dir/build.make CMakeFiles/Catthreadpool+.dir/Catthreadpool.cpp.o.provides.build
-.PHONY : CMakeFiles/Catthreadpool+.dir/Catthreadpool.cpp.o.provides
+CMakeFiles/Catthreadpool+.dir/Threadpool.cpp.o.provides: CMakeFiles/Catthreadpool+.dir/Threadpool.cpp.o.requires
+	$(MAKE) -f CMakeFiles/Catthreadpool+.dir/build.make CMakeFiles/Catthreadpool+.dir/Threadpool.cpp.o.provides.build
+.PHONY : CMakeFiles/Catthreadpool+.dir/Threadpool.cpp.o.provides
 
-CMakeFiles/Catthreadpool+.dir/Catthreadpool.cpp.o.provides.build: CMakeFiles/Catthreadpool+.dir/Catthreadpool.cpp.o
+CMakeFiles/Catthreadpool+.dir/Threadpool.cpp.o.provides.build: CMakeFiles/Catthreadpool+.dir/Threadpool.cpp.o
 
 
 # Object files for target Catthreadpool+
 Catthreadpool____OBJECTS = \
-"CMakeFiles/Catthreadpool+.dir/Catthreadpool.cpp.o"
+"CMakeFiles/Catthreadpool+.dir/Threadpool.cpp.o"
 
 # External object files for target Catthreadpool+
 Catthreadpool____EXTERNAL_OBJECTS =
 
-libCatthreadpool+.so: CMakeFiles/Catthreadpool+.dir/Catthreadpool.cpp.o
+libCatthreadpool+.so: CMakeFiles/Catthreadpool+.dir/Threadpool.cpp.o
 libCatthreadpool+.so: CMakeFiles/Catthreadpool+.dir/build.make
 libCatthreadpool+.so: CMakeFiles/Catthreadpool+.dir/link.txt
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/cat/code/GMnetwork/SrcLib/Threadpool/C++Catthreadpool/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Linking CXX shared library libCatthreadpool+.so"
@@ -99,7 +99,7 @@ CMakeFiles/Catthreadpool+.dir/build: libCatthreadpool+.so
 
 .PHONY : CMakeFiles/Catthreadpool+.dir/build
 
-CMakeFiles/Catthreadpool+.dir/requires: CMakeFiles/Catthreadpool+.dir/Catthreadpool.cpp.o.requires
+CMakeFiles/Catthreadpool+.dir/requires: CMakeFiles/Catthreadpool+.dir/Threadpool.cpp.o.requires
 
 .PHONY : CMakeFiles/Catthreadpool+.dir/requires
 
