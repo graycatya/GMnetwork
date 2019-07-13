@@ -1,7 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Catthreadpool+.dir/Catthreadpool.cpp.o"
   "libCatthreadpool+.pdb"
-  "libCatthreadpool+.a"
+  "libCatthreadpool+.so"
 )
 
 # Per-language clean rules from dependency scanning.

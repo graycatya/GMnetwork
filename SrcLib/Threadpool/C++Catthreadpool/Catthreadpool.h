@@ -18,11 +18,12 @@ namespace CATTHREADPOOL
             {
                 void*(*function)(void* arg);
                 void* arg;
+                threadevent_t(void*(*func)(void* arg), void* arg) : function(func), arg(arg) {}
             };
             CatThreadPool(int max_thread_num, int min_thread_num, int queue_max_size = 20);
             ~CatThreadPool();
             
-            int AddThreads(threadevent_t* threadevent);
+            int AddThreads(void*(*func)(void* arg), void* arg);
 
             int GetExistThreadNum( void );
             int GetBusyThreadNum( void );
@@ -46,17 +47,17 @@ namespace CATTHREADPOOL
             int max_thread_num;         /* 线程池最大线程数 */
             int min_thread_num;         /* 线程池最小线程数 */
             int live_thread_num;        /* 当前存活线程个数 */
-            int busy_thread_num;        /* 忙状态线程个数 */
-            int wait_exit_thread_num;   /* 要销毁的线程个数 */
-            int add_threadnum;          /* 每次增加的线程数 */
-            int del_threadnum;          /* 每次销毁的线程个数 */
-            unsigned int tick_time;              /* 管理者线程心跳时间 */
+            int busy_thread_num = 0;        /* 忙状态线程个数 */
+            int wait_exit_thread_num = 0;   /* 要销毁的线程个数 */
+            int add_threadnum = 10;          /* 每次增加的线程数 */
+            int del_threadnum = 10;          /* 每次销毁的线程个数 */
+            unsigned int tick_time = 10;              /* 管理者线程心跳时间 */
 
             //int queue_front;        /* task_queue队头下标 */
             //int queue_rear;         /* task_queue队尾下标 */
             //int queue_size;         /* task_queue队中实际任务数 */
             int queue_max_size;     /* task_queue队列可容纳任务上限 */
 
-            bool shutdown;       /* 标志位，线程池使用状态，true or false */
+            bool shutdown = false;       /* 标志位，线程池使用状态，true or false */
     };
 }

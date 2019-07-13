@@ -46,7 +46,7 @@ void* CatThreadPool::adjust_thread(void *threadpool)
         if( (busy_thread_num * 2) < live_thread_num && live_thread_num > pool->min_thread_num )
         {
             pthread_mutex_lock(&(pool->my_lock));
-            pool->wait_exit_thread_num = pool->tick_time;
+            pool->wait_exit_thread_num = pool->del_threadnum;
             pthread_mutex_unlock(&(pool->my_lock));
             for(i = 0; i < pool->wait_exit_thread_num; i++)
             {
@@ -115,11 +115,8 @@ CatThreadPool::CatThreadPool(int max_thread_num, int min_thread_num, int queue_m
 {
     this->max_thread_num = max_thread_num;
     this->min_thread_num = min_thread_num;
-    this->busy_thread_num = 0;
     this->live_thread_num = min_thread_num; /* init survive */
-    this->wait_exit_thread_num = 0;
     this->queue_max_size = queue_max_size;
-    this->shutdown = false; /* no thread */
 
     threads = new pthread_t[max_thread_num];
     if(threads == nullptr)
@@ -151,13 +148,23 @@ CatThreadPool::CatThreadPool(int max_thread_num, int min_thread_num, int queue_m
 
 CatThreadPool::~CatThreadPool()
 {
-
+    if(threads != nullptr)
+    {
+        delete[] threads;
+    }
+    for( auto ret : task_queue )
+    {
+        if(ret != nullptr)
+        {
+            delete ret;
+        }
+    }
 }
 
-int CatThreadPool::AddThreads(threadevent_t* threadevent)
+int CatThreadPool::AddThreads(void*(*func)(void* arg), void* arg)
 {
     int size = -1;
-    if(threadevent == nullptr)
+    if(func == nullptr || arg == nullptr)
     {
         return -1;
     }
@@ -173,8 +180,8 @@ int CatThreadPool::AddThreads(threadevent_t* threadevent)
         pthread_mutex_unlock(&(my_lock));
         return 0;
     }
-
-    task_queue.push_back(threadevent);
+    threadevent_t* event_t = new threadevent_t(func, arg);
+    task_queue.push_back(event_t);
 
     pthread_cond_signal(&(queue_not_empty));
     pthread_mutex_unlock(&(my_lock));

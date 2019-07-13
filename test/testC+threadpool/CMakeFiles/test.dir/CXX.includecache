@@ -1,0 +1,28 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+/home/cat/code/GMnetwork/SrcLib/Threadpool/C++Catthreadpool/Catthreadpool.h
+iostream
+-
+vector
+-
+list
+-
+deque
+-
+pthread.h
+-
+signal.h
+-
+
+/home/cat/code/GMnetwork/test/testC+threadpool/testx.cpp
+../../SrcLib/Threadpool/C++Catthreadpool/Catthreadpool.h
+/home/cat/code/GMnetwork/SrcLib/Threadpool/C++Catthreadpool/Catthreadpool.h
+unistd.h
+-
+
