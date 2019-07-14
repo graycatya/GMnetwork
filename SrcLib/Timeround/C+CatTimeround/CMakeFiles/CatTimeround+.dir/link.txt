@@ -1,0 +1,3 @@
+"C:\Program Files (x86)\cmake-3.14.3-win64-x64\bin\cmake.exe" -E remove -f CMakeFiles\CatTimeround+.dir/objects.a
+G:\qt5\Tools\mingw530_32\bin\ar.exe cr CMakeFiles\CatTimeround+.dir/objects.a @CMakeFiles\CatTimeround+.dir\objects1.rsp
+G:\qt5\Tools\mingw530_32\bin\g++.exe    -shared -o libCatTimeround+.dll -Wl,--out-implib,libCatTimeround+.dll.a -Wl,--major-image-version,0,--minor-image-version,0 -Wl,--whole-archive CMakeFiles\CatTimeround+.dir/objects.a -Wl,--no-whole-archive @CMakeFiles\CatTimeround+.dir\linklibs.rsp

@@ -1,0 +1,3 @@
+/home/cat/code/GMnetwork/test/Gmapitest/CMakeFiles/rebuild_cache.dir
+/home/cat/code/GMnetwork/test/Gmapitest/CMakeFiles/test.dir
+/home/cat/code/GMnetwork/test/Gmapitest/CMakeFiles/edit_cache.dir

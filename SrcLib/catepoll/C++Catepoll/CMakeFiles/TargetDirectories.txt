@@ -1,0 +1,3 @@
+/home/cat/code/GMnetwork/SrcLib/catepoll/C++Catepoll/CMakeFiles/rebuild_cache.dir
+/home/cat/code/GMnetwork/SrcLib/catepoll/C++Catepoll/CMakeFiles/CatEpoll+.dir
+/home/cat/code/GMnetwork/SrcLib/catepoll/C++Catepoll/CMakeFiles/edit_cache.dir

@@ -1,0 +1,3 @@
+/home/cat/code/GMnetwork/SrcLib/GMSystemapi/CMakeFiles/rebuild_cache.dir
+/home/cat/code/GMnetwork/SrcLib/GMSystemapi/CMakeFiles/CatGmapi.dir
+/home/cat/code/GMnetwork/SrcLib/GMSystemapi/CMakeFiles/edit_cache.dir

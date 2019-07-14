@@ -1,0 +1,1 @@
+/usr/bin/cc   -rdynamic CMakeFiles/cputest.dir/cputest.c.o  -o build/Bin/cputest -Wl,-rpath,/home/cat/code/GMnetwork/test/testcpu/build/build 

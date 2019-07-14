@@ -1,0 +1,1 @@
+/usr/bin/cc -O3 -DNDEBUG  -rdynamic CMakeFiles/udptest.dir/udptest.c.o  -o build/Bin/udptest build/Lib/libCatnetwork.a 

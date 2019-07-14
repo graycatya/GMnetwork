@@ -1,0 +1,1 @@
+/usr/bin/c++    -rdynamic CMakeFiles/test.dir/test.cpp.o  -o build/Bin/test  -L/home/cat/code/GMnetwork/test/testtimer/../../SrcLib/Timeround -Wl,-rpath,/home/cat/code/GMnetwork/test/testtimer/../../SrcLib/Timeround -lCatTimeround -lCatTimeround 

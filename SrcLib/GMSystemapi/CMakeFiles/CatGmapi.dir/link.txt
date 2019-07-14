@@ -1,0 +1,1 @@
+/usr/bin/cc -fPIC   -shared -Wl,-soname,libCatGmapi.so -o libCatGmapi.so CMakeFiles/CatGmapi.dir/CatGmapi.c.o -lpthread -lpthread 

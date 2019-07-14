@@ -1,0 +1,1 @@
+/usr/bin/cc -O3 -DNDEBUG  -rdynamic CMakeFiles/test.dir/test.c.o  -o build/Bin/test  -L/home/cat/code/GMnetwork/test/Gmapitest/../../SrcLib/GMSystemapi -Wl,-rpath,/home/cat/code/GMnetwork/test/Gmapitest/../../SrcLib/GMSystemapi -lCatGmapi -lCatGmapi 
