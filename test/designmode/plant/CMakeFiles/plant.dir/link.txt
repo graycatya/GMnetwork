@@ -1,0 +1,3 @@
+"C:\Program Files\cmake-3.14.0-rc1-win64-x64\bin\cmake.exe" -E remove -f CMakeFiles\plant.dir/objects.a
+D:\QT\QT5\Tools\mingw730_64\bin\ar.exe cr CMakeFiles\plant.dir/objects.a @CMakeFiles\plant.dir\objects1.rsp
+D:\QT\QT5\Tools\mingw730_64\bin\g++.exe -O3 -DNDEBUG   -Wl,--whole-archive CMakeFiles\plant.dir/objects.a -Wl,--no-whole-archive  -o build\Bin\plant.exe -Wl,--out-implib,build\Lib\libplant.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\plant.dir\linklibs.rsp
