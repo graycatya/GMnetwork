@@ -1,4 +1,4 @@
-#include "Catepoll.h"
+#include "../../../SrcLib/catepoll/CCatepoll/Catepoll.h"
 
 int main(int argc, char* argv[])
 {
@@ -43,7 +43,7 @@ int main(int argc, char* argv[])
 					while(1)
 					{
 						char buf[6]="";
-						int n = Cat_Read(catepoll_t->events[i].data.fd , buf,5);
+						int n = Cat_Read(catepoll_t->events[i].data.fd , buf,2048);
 						if(n < 0 )
 						{
 							if(errno ==  EAGAIN)//缓冲区如果读干净了,read返回值小于0,errno设置成EAGAIN

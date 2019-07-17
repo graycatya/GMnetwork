@@ -4,6 +4,7 @@ cmake_minimum_required( VERSION 3.0 )
 # 项目名
 project (StressteSting)
 
+add_definitions("-Wall -g")
 add_definitions("-std=c++11")
 
 # 生成路径

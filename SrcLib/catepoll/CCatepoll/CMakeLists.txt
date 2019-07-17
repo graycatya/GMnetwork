@@ -12,8 +12,8 @@ endif(_WINDOWSSYS_)
 add_definitions("-Wall -g")
 
 # 库路径
-set(INC_DIR ${PROJECT_SOURCE_DIR}/../Network)
-set(LINK_DIR ${PROJECT_SOURCE_DIR}/../Network)
+set(INC_DIR ${PROJECT_SOURCE_DIR}/../../Network/CCatnet)
+set(LINK_DIR ${PROJECT_SOURCE_DIR}/../../Network/CCatnet)
 
 # 将名称保存到 DIR_LIB_SRCS 变量
 aux_source_directory(. DIR_LIB_SRCS)

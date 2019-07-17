@@ -19,10 +19,10 @@ if(_WINDOWSSYS_)
 endif(_WINDOWSSYS_)
 
 # 库路径
-set(INC_DIR ${PROJECT_SOURCE_DIR}/../../SrcLib/catepoll
-            ${PROJECT_SOURCE_DIR}/../../SrcLib/Network)
-set(LINK_DIR ${PROJECT_SOURCE_DIR}/../../SrcLib/catepoll
-            ${PROJECT_SOURCE_DIR}/../../SrcLib/Network)
+set(INC_DIR ${PROJECT_SOURCE_DIR}/../../../SrcLib/catepoll/CCatepoll
+            ${PROJECT_SOURCE_DIR}/../../../SrcLib/Network/CCatnet)
+set(LINK_DIR ${PROJECT_SOURCE_DIR}/../../../SrcLib/catepoll/CCatepoll
+            ${PROJECT_SOURCE_DIR}/../../../SrcLib/Network/CCatnet)
 
 include_directories(${INC_DIR})
 link_directories(${LINK_DIR})

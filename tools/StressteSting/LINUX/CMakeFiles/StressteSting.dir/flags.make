@@ -3,13 +3,13 @@
 
 # compile C with /usr/bin/cc
 # compile CXX with /usr/bin/c++
-C_FLAGS =   -std=c++11
+C_FLAGS =   -Wall -g -std=c++11
 
 C_DEFINES = 
 
 C_INCLUDES = -I/home/cat/code/GMnetwork/tools/StressteSting/LINUX/../../../SrcLib/catepoll/C++Catepoll -I/home/cat/code/GMnetwork/tools/StressteSting/LINUX/../../../SrcLib/Network/C++Catnet -I/home/cat/code/GMnetwork/tools/StressteSting/LINUX/../../../SrcLib/Threadpool/C++Catthreadpool 
 
-CXX_FLAGS =   -std=c++11
+CXX_FLAGS =   -Wall -g -std=c++11
 
 CXX_DEFINES = 
 

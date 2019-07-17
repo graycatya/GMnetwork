@@ -28,6 +28,7 @@ namespace CATTHREADPOOL
 
             int GetExistThreadNum( void );
             int GetBusyThreadNum( void );
+            void SetTickTime(int time);
         
         private:
             static void* adjust_thread(void *threadpool);

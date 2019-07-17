@@ -57,7 +57,7 @@ int Catepollx_TcpStart(Catepoll_t* catepoll_t)
     int lfd = Cat_TcpScoket(catepoll_t->ip, catepoll_t->port, catepoll_t->sock_family);
     Cat_Listen(lfd, catepoll_t->listens);
     catepoll_t->lfd = lfd;
-    //catepoll_t->events = (struct epoll_event*)malloc(sizeof(struct epoll_event) * catepoll_t->WaitSize);
+    catepoll_t->events = (struct epoll_event*)malloc(sizeof(struct epoll_event) * catepoll_t->WaitSize);
     if((catepoll_t->epfd = Catepoll_Init(catepoll_t->EpollSize, catepoll_t->WaitSize)) < 0)
     {
         Cat_Errexit("Catepoll_Init error");

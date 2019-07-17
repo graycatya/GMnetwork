@@ -100,6 +100,11 @@ int CatThreadPool::GetBusyThreadNum( void )
     return num;
 }
 
+void CatThreadPool::SetTickTime(int time)
+{
+    this->tick_time = time;
+}
+
 void* CatThreadPool::adjust_thread(void *threadpool)
 {
 int i;
