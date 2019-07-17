@@ -4,7 +4,7 @@
 # compile CXX with /usr/bin/c++
 CXX_FLAGS = -fPIC   -Wall -g
 
-CXX_DEFINES = -DCatEpoll__EXPORTS
+CXX_DEFINES = -DCatnetwork__EXPORTS
 
-CXX_INCLUDES = -I/home/cat/code/GMnetwork/SrcLib/catepoll/C++Catepoll/../../Network/C++Catnet 
+CXX_INCLUDES = 
 

@@ -1,3 +1,0 @@
-/home/cat/code/GMnetwork/SrcLib/Network/C+Catnet/CMakeFiles/rebuild_cache.dir
-/home/cat/code/GMnetwork/SrcLib/Network/C+Catnet/CMakeFiles/Catnetwork.dir
-/home/cat/code/GMnetwork/SrcLib/Network/C+Catnet/CMakeFiles/edit_cache.dir

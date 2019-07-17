@@ -4,7 +4,7 @@
 
 CATEPOLL::CatEpoll::CatEpoll(int EpollSize , int WaitSize, int EventSize)
 {
-    epfd = epoll_create1(EpollSize);
+    epfd = epoll_create(EpollSize);
     if(epfd < 0)
     {
         Cat_Errexit("CatEpoll epfd errno ");
@@ -35,7 +35,7 @@ int CATEPOLL::CatEpoll::Wait(int timeout)
 
 int CATEPOLL::CatEpoll::Ctl(int op, int fd, epoll_event *event)
 {
-    return epoll_ctl(epfd, op, fd, events);
+    return epoll_ctl(epfd, op, fd, event);
 }
 
 int CATEPOLL::CatEpoll::Addfd(int fd, int event, bool fl)

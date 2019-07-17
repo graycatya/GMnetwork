@@ -1,6 +1,6 @@
 #pragma once
 
-#include "../../Network/C+Catnet/Cat_net.h"
+#include "../../Network/C++Catnet/Cat_net.h"
 
 namespace CATEPOLL
 {

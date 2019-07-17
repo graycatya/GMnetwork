@@ -1,7 +1,13 @@
 #ifndef __CATNET_H_
 #define __CATNET_H_
 
-#include "../../Catdef.h"
+#include "../../../SrcLib/Catdef.h"
+
+
+#ifdef  __cplusplus  
+extern "C" {  
+#endif  
+
 
 enum {
 CAT_IPV4,
@@ -41,5 +47,8 @@ int Cat_TcpScoket(const char* IP, short Port, int Ip_family);
 
 int Cat_UdpScoket(const char* IP, short Port, int Ip_family);
 
+#ifdef  __cplusplus  
+}  
+#endif  /* end of __cplusplus */
 
 #endif
