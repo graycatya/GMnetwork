@@ -1,0 +1,1 @@
+/usr/bin/cc   -rdynamic CMakeFiles/libevent.dir/test.c.o  -o libevent -levent 
